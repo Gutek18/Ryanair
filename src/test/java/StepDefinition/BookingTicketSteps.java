@@ -83,11 +83,18 @@ public class BookingTicketSteps {
         loginPage.Login(login, password);
     }
 
-    @When("^I pay for booking with card details \"([^\"]*)\", \"([^\"]*)\",\"([^\"]*)\" and cvv \"([^\"]*)\"$")
-    public void iPayForBookingWithCardDetailsAndCvv(String cardNumber, int month, int year, int cvv) throws InterruptedException {
+
+    @When("^I pay for booking with card details \"([^\"]*)\", \"([^\"]*)\", cvv \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void iPayForBookingWithCardDetailsCvvAnd(String cardNumber, String date, String cvv, String cardHolder) throws Throwable {
         PaymentPage paymentPage = new PaymentPage();
-        paymentPage.ChoosInsurence();
         paymentPage.PaymentMethods();
+        paymentPage.CardNumber(cardNumber);
+        paymentPage.Date(date);
+        paymentPage.CvvNumber(cvv);
+        paymentPage.ProvideCardHolderName(cardHolder);
+        paymentPage.ChoosInsurence();
+        paymentPage.AcceptTermsAndConditions();
+
         Thread.sleep(5000);
     }
 
