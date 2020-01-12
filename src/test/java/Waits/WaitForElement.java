@@ -7,8 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitForElement {
     private static WebDriverWait getWebDriverWait() {
-
-        return new WebDriverWait(DriverManager.getWebDriver(), 5);
+        return new WebDriverWait(DriverManager.getWebDriver(), 15);
     }
 
     public static void waitUntilElementIsVisible(WebElement element) {

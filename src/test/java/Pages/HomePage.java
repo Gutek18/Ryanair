@@ -37,9 +37,10 @@ public class HomePage {
     private WebElement dateFly;
     @FindBy(css = "#ry-tooltip-9 > div.tooltip-inner > hp-lazy-controls-tooltips > hp-app-controls-tooltips > hp-controls-tooltips-container > hp-controls-tooltips > hp-passengers-container > hp-passengers > hp-passengers-picker > ry-counter:nth-child(2) > div.counter > div.counter__button-wrapper--enabled")
     private WebElement addPerson;
-//    @FindBy(css = "body > hp-app-root > hp-home-container > hp-home > hp-search-widget > div > hp-flight-search-widget-container > hp-flight-search-widget > div > div")
     @FindBy(css = "body > hp-app-root > hp-home-container > hp-home > hp-search-widget > div > hp-flight-search-widget-container > hp-flight-search-widget > div > div > button")
     private WebElement searchButton;
+    @FindBy(id = "glyphs.close")
+    private WebElement cookies;
 
     public void DepartureCity() {
         WaitForElement.waitUntilElementIsVisible(departure);
@@ -82,5 +83,9 @@ public class HomePage {
     public void ClickLogin() {
         WaitForElement.waitUntilElementIsClickable(loginButton);
         loginButton.click();
+    }
+    public void AcceptingCookies(){
+     WaitForElement.waitUntilElementIsClickable(cookies);
+     cookies.click();
     }
 }

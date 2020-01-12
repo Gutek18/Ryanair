@@ -17,7 +17,6 @@ public class Hook extends BaseUtil {
     public void InitializeTest() {
         DriverManager.getWebDriver();
         BaseUtil.setInitialConfiguration();
-
     }
 
     @After
