@@ -85,22 +85,23 @@ public class BookingTicketSteps {
 
 
     @When("^I pay for booking with card details \"([^\"]*)\", \"([^\"]*)\", cvv \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void iPayForBookingWithCardDetailsCvvAnd(String cardNumber, String date, String cvv, String cardHolder) throws Throwable {
+    public void iPayForBookingWithCardDetailsCvvAnd(String cardNumber, String date, String cvv, String cardHolder) {
         PaymentPage paymentPage = new PaymentPage();
+        paymentPage.ProvidePhoneNumber();
+        paymentPage.ChoosInsurence();
         paymentPage.PaymentMethods();
-        paymentPage.CardNumber(cardNumber);
+        paymentPage.AcceptTermsAndConditions();
         paymentPage.Date(date);
         paymentPage.CvvNumber(cvv);
         paymentPage.ProvideCardHolderName(cardHolder);
-        paymentPage.ChoosInsurence();
-        paymentPage.AcceptTermsAndConditions();
-
-        Thread.sleep(5000);
+        paymentPage.CardNumber(cardNumber);
     }
 
-//    @And("^Provide billing address \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\",\"([^\"]*)\"$")
-//    public void provideBillingAddress(String arg0, String arg1, String arg2, String arg3, String arg4) throws Throwable {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new PendingException();
-//    }
+    @And("^Provide billing address \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" and country$")
+    public void provideBillingAddressAndCountry(String city, String address, String zipCode) {
+        PaymentPage billingAddress = new PaymentPage();
+        billingAddress.ProvideAddress(address);
+        billingAddress.ProvideCity(city);
+        System.out.println("TEst");
+    }
 }
