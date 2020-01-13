@@ -2,9 +2,9 @@ package StepDefinition;
 
 import Base.BaseUtil;
 import Pages.*;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import static Base.BaseUtil.APPLICATION_URL;
@@ -83,7 +83,6 @@ public class BookingTicketSteps {
         loginPage.Login(login, password);
     }
 
-
     @When("^I pay for booking with card details \"([^\"]*)\", \"([^\"]*)\", cvv \"([^\"]*)\" and \"([^\"]*)\"$")
     public void iPayForBookingWithCardDetailsCvvAnd(String cardNumber, String date, String cvv, String cardHolder) {
         PaymentPage paymentPage = new PaymentPage();
@@ -97,11 +96,19 @@ public class BookingTicketSteps {
         paymentPage.CardNumber(cardNumber);
     }
 
-    @And("^Provide billing address \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" and country$")
-    public void provideBillingAddressAndCountry(String city, String address, String zipCode) {
+    @And("^Provide billing address \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" and select country$")
+    public void provideBillingAddressAndSelectCountry(String city, String address, String zipCode) {
         PaymentPage billingAddress = new PaymentPage();
         billingAddress.ProvideAddress(address);
         billingAddress.ProvideCity(city);
-        System.out.println("TEst");
+        billingAddress.SelectCountry();
+        billingAddress.ProvideZipCode(zipCode);
+    }
+
+    @Then("^I should get payment declined message$")
+    public void iShouldGetPaymentDeclinedMessage() {
+        PaymentPage error = new PaymentPage();
+        System.out.println(error.PaymentErrorMsg());
+        System.out.println("TEST");
     }
 }

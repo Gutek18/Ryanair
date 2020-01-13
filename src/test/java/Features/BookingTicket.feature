@@ -11,8 +11,8 @@ Feature: Interview Task
     And Don't choose any additives and go next
     And Go to basket and login by login "<login>" and "<password>"
     When I pay for booking with card details "<number>", "<month/year>", cvv "<cvv>" and "<cardholder>"
-    And Provide billing address "<city>" "<address>" "<zipCode>" and country
-#    Then I should get payment declined message
+    And Provide billing address "<city>" "<address>" "<zipCode>" and select country
+    Then I should get payment declined message
 
     Examples:
       | login                       | password | name1     | surname1 | name2     | surname2 | number           | month/year | cvv | cardholder     | city      | address | zipCode |
