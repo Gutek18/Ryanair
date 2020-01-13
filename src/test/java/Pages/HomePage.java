@@ -2,16 +2,11 @@ package Pages;
 
 import Base.DriverManager;
 import Waits.WaitForElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-    private WebDriver driver;
 
     public HomePage() {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
@@ -60,7 +55,7 @@ public class HomePage {
         cityDestination.click();
     }
 
-    public void ClickingSearchButton(){
+    public void ClickingSearchButton() {
         WaitForElement.waitUntilElementIsClickable(searchButton);
         searchButton.click();
     }
@@ -70,7 +65,7 @@ public class HomePage {
         dateFly.click();
     }
 
-    public void AddingOnePerson(){
+    public void AddingOnePerson() {
         WaitForElement.waitUntilElementIsClickable(addPerson);
         addPerson.click();
     }
@@ -84,8 +79,9 @@ public class HomePage {
         WaitForElement.waitUntilElementIsClickable(loginButton);
         loginButton.click();
     }
-    public void AcceptingCookies(){
-     WaitForElement.waitUntilElementIsClickable(cookies);
-     cookies.click();
+
+    public void AcceptingCookies() {
+        WaitForElement.waitUntilElementIsClickable(cookies);
+        cookies.click();
     }
 }

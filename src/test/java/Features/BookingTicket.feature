@@ -3,7 +3,7 @@ Feature: Interview Task
   Scenario Outline: Booking tickets with wrong credit card number
 
     Given Open browser and navigate to Ryanair page
-    And I make a booking one way tickets from Gdansk to London  for two adults
+    And I make a booking one way tickets from Gdansk to London for two adults
     And Select ticket price and choose baggage
     And Fill out all needed flight information with "<name1>" and "<surname1>" and "<name2>", "<surname2>"
     And Choose random seats for passengers

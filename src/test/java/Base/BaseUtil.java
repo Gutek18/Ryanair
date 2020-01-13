@@ -1,9 +1,5 @@
 package Base;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 public class BaseUtil {
 
     public static final String APPLICATION_URL = "https://www.ryanair.com/ie/en";
