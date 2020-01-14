@@ -13,7 +13,7 @@ public class SitsPage {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
-    @FindBy(css = "body > seats-root > div > main > seats-container > div > div.seatmap-container.ng-tns-c15-1.seatmap-container--displaying-alert.ng-star-inserted > div:nth-child(2) > div > seats-actions > span:nth-child(1) > ry-tooltip")
+    @FindBy(xpath = "/html/body/seats-root/div/main/seats-container/div/div[3]/div[2]/div/seats-actions/span[1]/ry-tooltip")
     private WebElement randomSitsButton;
 
     public void ChooseRandomSits(){

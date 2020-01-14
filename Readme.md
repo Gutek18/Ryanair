@@ -1,4 +1,5 @@
 #Interview task 
+######Release date 15.01.2020
 Project could be found on my github page: [Link to GitHub](https://github.com/Gutek18/Ryanair)
 ##Requirements
 1. Please automate a booking up to a declined payment on https://www.ryanair.com/ie/en/
@@ -46,6 +47,7 @@ The test can be performed using the feature file, as well as the TestRunner clas
 - Report will be created in sub-folder target\site\cucumber-report\index.html.
 - Additionally a screenshot is created when test case has been failed in sub-folder \target\Screenshots\
 ## Known issues
-- After clicking on the login page, the browser did not always display the same page.
-- Sometime I have problem with "choosing random sits" button, appears error message "is not clickable at point".
+- After clicking on the login page, the browser not always display the same page.
+- Sometime I have problem with "choosing random sits" button.
+- I default pages appears error message "is not clickable at point...".
 - Very rarely in "Additives Page" appear popup, but I can't deal with it because of how rare it appears.

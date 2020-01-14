@@ -32,9 +32,9 @@ public class PaymentPage {
     private WebElement addressLine1;
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-input-d[3]/div/input")
     private WebElement city;
-    @FindBy(xpath = "//div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-dropdown/div[2]/button")
+    @FindBy(css = "body > app-root > ng-component > ry-spinner > div > payment-form > form > div:nth-child(5) > payment-methods > div > div > div:nth-child(1) > div > add-method-modal > form > div > div > div:nth-child(2) > billing-address > address-form > form > ry-dropdown > div.dropdown.b2")
     private WebElement country;
-    @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-dropdown/div[2]/div/div/ry-dropdown-item[5]/button")
+    @FindBy(css = "body > app-root > ng-component > ry-spinner > div > payment-form > form > div:nth-child(5) > payment-methods > div > div > div:nth-child(1) > div > add-method-modal > form > div > div > div:nth-child(2) > billing-address > address-form > form > ry-dropdown > div.dropdown.b2.dropdown--opened > div > div > ry-dropdown-item:nth-child(2)")
     private WebElement pickUpCountryFromTheList;
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-input-d[4]/div/input")
     private WebElement zipCode;

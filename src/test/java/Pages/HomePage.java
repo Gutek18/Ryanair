@@ -16,7 +16,7 @@ public class HomePage {
     private WebElement loginButton;
     @FindBy(xpath = "/html/body/hp-app-root/hp-home-container/hp-home/hp-search-widget/div/hp-flight-search-widget-container/hp-flight-search-widget/hp-trip-type-container/hp-trip-type/hp-trip-type-button[2]/button/icon")
     private WebElement oneWayButton;
-    @FindBy(xpath = "//*[@id=\"input-button__departure\"]")
+    @FindBy(id = "input-button__departure")
     private WebElement departure;
     @FindBy(css = "#ry-tooltip-0 > div.tooltip-inner > hp-lazy-controls-tooltips > hp-app-controls-tooltips > hp-controls-tooltips-container > hp-controls-tooltips > hp-origin-container > hp-airports > hp-countries > div:nth-child(4) > div:nth-child(8)")
     private WebElement countryDeparture;
@@ -37,53 +37,46 @@ public class HomePage {
     @FindBy(id = "glyphs.close")
     private WebElement cookies;
 
-    public HomePage DepartureCity() {
+    public void DepartureCity() {
         WaitForElement.waitUntilElementIsVisible(departure);
         departure.click();
         WaitForElement.waitUntilElementIsClickable(countryDeparture);
         countryDeparture.click();
         WaitForElement.waitUntilElementIsClickable(cityDeparture);
         cityDeparture.click();
-        return new HomePage();
     }
 
-    public HomePage DestinationCity() {
+    public void DestinationCity() {
         WaitForElement.waitUntilElementIsVisible(departure);
         destination.click();
         WaitForElement.waitUntilElementIsClickable(countryDestination);
         countryDestination.click();
-        WaitForElement.waitUntilElementIsClickable(countryDestination);
+        WaitForElement.waitUntilElementIsClickable(cityDestination);
         cityDestination.click();
-        return new HomePage();
     }
 
-    public BaggagePage ClickingSearchButton() {
+    public void ClickingSearchButton() {
         WaitForElement.waitUntilElementIsClickable(searchButton);
         searchButton.click();
-        return new BaggagePage();
     }
 
-    public HomePage DateFly() {
+    public void DateFly() {
         WaitForElement.waitUntilElementIsVisible(dateFly);
         dateFly.click();
-        return new HomePage();
     }
 
-    public HomePage AddingOnePerson() {
+    public void AddingOnePerson() {
         WaitForElement.waitUntilElementIsClickable(addPerson);
         addPerson.click();
-        return new HomePage();
     }
 
-    public HomePage OneWayButton() {
+    public void OneWayButton() {
         WaitForElement.waitUntilElementIsClickable(oneWayButton);
         oneWayButton.click();
-        return new HomePage();
     }
 
-    public HomePage AcceptingCookies() {
+    public void AcceptingCookies() {
         WaitForElement.waitUntilElementIsClickable(cookies);
         cookies.click();
-        return new HomePage();
     }
 }
