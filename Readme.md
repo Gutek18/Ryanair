@@ -43,7 +43,8 @@ Example:
 Test has been executed on Windows 10, Chrome/Firefox web browser. Unfortunately I don't have access any computer with MacOS, that why Test scenario wasn't tested on Macintosh.
 The test can be performed using the feature file, as well as the TestRunner class.
 ### Report
-Report will be created in sub-folder target\site\cucumber-report\index.html.
+- Report will be created in sub-folder target\site\cucumber-report\index.html.
+- Additionally a screenshot is created when test case has been failed in sub-folder \target\Screenshots\
 ## Known issues
 - After clicking on the login page, the browser did not always display the same page.
 - Sometime I have problem with "choosing random sits" button, appears error message "is not clickable at point".
