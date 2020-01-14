@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverManager {
     private static WebDriver driver;
 
-    private DriverManager() {
-    }
-
-    public static WebDriver getWebDriver() {
+      public static WebDriver getWebDriver() {
         if (driver == null) {
             driver = new ChromeDriver();
         }

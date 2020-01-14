@@ -28,22 +28,16 @@ public class PaymentPage {
     private WebElement cvvNumber;
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[1]/div/card-details/form/ry-input-d[2]/div/input")
     private WebElement cardHolderName;
-
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-input-d[1]/div/input")
     private WebElement addressLine1;
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-input-d[3]/div/input")
     private WebElement city;
-
     @FindBy(xpath = "//div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-dropdown/div[2]/button")
-//    @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-dropdown/div[2]")
     private WebElement country;
-
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-dropdown/div[2]/div/div/ry-dropdown-item[5]/button")
     private WebElement pickUpCountryFromTheList;
-
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[2]/billing-address/address-form/form/ry-input-d[4]/div/input")
     private WebElement zipCode;
-
     @FindBy(xpath = "/html/body/app-root/ng-component/ry-spinner/div/payment-form/form/div[5]/payment-methods/div/div/div[1]/div/add-method-modal/form/div/div/div[1]/div/card-details/form/ry-input-d[1]/span[1]")
     private WebElement errorMsg;
 
