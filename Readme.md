@@ -1,7 +1,7 @@
 #Interview task 
 ######Release date 15.01.2020
 Project could be found on my github page: [Link to GitHub](https://github.com/Gutek18/Ryanair)
-##Requirements
+#####Requirements
 1. Please automate a booking up to a declined payment on https://www.ryanair.com/ie/en/
 2. Use any card number and verify the error message.
 3. Languages, use any one of the following methods:
@@ -10,12 +10,12 @@ Project could be found on my github page: [Link to GitHub](https://github.com/Gu
 6. Give some documentation on why you chose what you did and documentation on how to run these tests.
 7. Show reporting for your resultsAs it was agreed I send you a project with test case implementing flight booking with a wrong card credentials.
 
-##General Requirements:
+#####General Requirements:
 1. Git - Use a Github account if you have one, to provide the source code
 2. We are fans of BDD and Cucumber in Ryanair, use these if you can
 3. The test itself is quite simple, though you should use all your skills to prove your knowledge & ability
 
-##Example Test Input
+#####Example Test Input
 Given I make a booking from “DUB” to “SXF” on 12/03/2017 for 2 adults and 1 child
 When I pay for booking with card details “5555 5555 5555 5557”, “10/18” and “265”
 Then I should get payment declined message
