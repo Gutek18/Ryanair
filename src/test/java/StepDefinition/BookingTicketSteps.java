@@ -52,15 +52,12 @@ public class BookingTicketSteps {
     public void chooseRandomSeatsForPassengers() {
         SitsPage sitsPage = new SitsPage();
         sitsPage.ChooseRandomSits();
-
     }
 
     @And("^Choose Cabin Bag$")
     public void chooseCabinBag() {
         CabinBagPage cabinBagPage = new CabinBagPage();
-        cabinBagPage.selectSmallBagForPassengers();
-        cabinBagPage.clickingContinueButton();
-
+        cabinBagPage.selectSmallBagForPassengers().clickingContinueButton();
     }
 
     @And("^Don't choose any additives and go next$")
@@ -102,6 +99,6 @@ public class BookingTicketSteps {
     @Then("^I should get payment declined message$")
     public void iShouldGetPaymentDeclinedMessage() {
         PaymentPage error = new PaymentPage();
-        Assert.assertEquals("Please enter a valid card number",error.PaymentErrorMsg());
+        Assert.assertEquals("Please enter a valid card number", error.PaymentErrorMsg());
     }
 }

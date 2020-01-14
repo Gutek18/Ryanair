@@ -37,51 +37,53 @@ public class HomePage {
     @FindBy(id = "glyphs.close")
     private WebElement cookies;
 
-    public void DepartureCity() {
+    public HomePage DepartureCity() {
         WaitForElement.waitUntilElementIsVisible(departure);
         departure.click();
         WaitForElement.waitUntilElementIsClickable(countryDeparture);
         countryDeparture.click();
         WaitForElement.waitUntilElementIsClickable(cityDeparture);
         cityDeparture.click();
+        return new HomePage();
     }
 
-    public void DestinationCity() {
+    public HomePage DestinationCity() {
         WaitForElement.waitUntilElementIsVisible(departure);
         destination.click();
         WaitForElement.waitUntilElementIsClickable(countryDestination);
         countryDestination.click();
         WaitForElement.waitUntilElementIsClickable(countryDestination);
         cityDestination.click();
+        return new HomePage();
     }
 
-    public void ClickingSearchButton() {
+    public BaggagePage ClickingSearchButton() {
         WaitForElement.waitUntilElementIsClickable(searchButton);
         searchButton.click();
+        return new BaggagePage();
     }
 
-    public void DateFly() {
+    public HomePage DateFly() {
         WaitForElement.waitUntilElementIsVisible(dateFly);
         dateFly.click();
+        return new HomePage();
     }
 
-    public void AddingOnePerson() {
+    public HomePage AddingOnePerson() {
         WaitForElement.waitUntilElementIsClickable(addPerson);
         addPerson.click();
+        return new HomePage();
     }
 
-    public void OneWayButton() {
+    public HomePage OneWayButton() {
         WaitForElement.waitUntilElementIsClickable(oneWayButton);
         oneWayButton.click();
+        return new HomePage();
     }
 
-    public void ClickLogin() {
-        WaitForElement.waitUntilElementIsClickable(loginButton);
-        loginButton.click();
-    }
-
-    public void AcceptingCookies() {
+    public HomePage AcceptingCookies() {
         WaitForElement.waitUntilElementIsClickable(cookies);
         cookies.click();
+        return new HomePage();
     }
 }
