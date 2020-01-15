@@ -16,12 +16,6 @@ public class SitsPage {
     @FindBy(xpath = "/html/body/seats-root/div/main/seats-container/div/div[3]/div[2]/div/seats-actions/span[1]/ry-tooltip")
     private WebElement randomSitsButton;
 
-    @FindBy(xpath = "//*[@class='seats-action__button ry-button ry-button--gradient-yellow']")
-    private WebElement continueButton;
-
-    @FindBy(xpath = "//*[@class='seats-modal__cta ry-button--gradient-blue']")
-    private WebElement popupButton;
-
     public void ChooseRandomSits() {
         WaitForElement.waitUntilElementIsClickable(randomSitsButton);
         randomSitsButton.click();
