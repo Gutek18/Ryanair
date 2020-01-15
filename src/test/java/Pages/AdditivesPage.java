@@ -11,10 +11,10 @@ public class AdditivesPage {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }
 
-    @FindBy(xpath = "/html/body/app-root/ng-component/main/products-list-container/products-list/div/div/div[2]/div[2]/div[2]/button")
+    @FindBy(xpath = "//*[@class='ry-button--full ry-button--gradient-yellow ry-button--large']")
     private WebElement continueButton;
 
-    public void clickingContinueButton(){
+    public void clickingContinueButton() {
         WaitForElement.waitUntilElementIsClickable(continueButton);
         continueButton.click();
     }

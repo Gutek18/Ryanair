@@ -51,3 +51,4 @@ The test can be performed using the feature file, as well as the TestRunner clas
 - Sometime I have problem with "choosing random sits" button.
 - I default pages appears error message "is not clickable at point...".
 - Very rarely in "Additives Page" appear popup, but I can't deal with it because of how rare it appears.
+- While testing, a message appears at the bottom left of the browser "An error occured. Please try again."
