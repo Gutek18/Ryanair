@@ -18,6 +18,7 @@ public class SitsPage {
 
     public void ChooseRandomSits() {
         WaitForElement.waitUntilElementIsClickable(randomSitsButton);
+        WaitForElement.waitUntilElementIsVisible(randomSitsButton);
         randomSitsButton.click();
-        }
+    }
 }
