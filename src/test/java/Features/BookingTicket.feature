@@ -16,4 +16,4 @@ Feature: Interview Task
 
     Examples:
       | login                       | password | nameFirstPerson | surnameFirstPerson | nameSecondPerson | surnameSecondPerson | number           | month/year | cvv | cardholder     | city      | address  | zipCode |
-      | sebastianwild1988@gmail.com | Testing1 | Sebastian       | Wild               | Katarzyna        | Kowalska            | 1234567891234567 | 0223       | 123 | Sebastian Wild | Barcelona | Camp Nou | 12345   |
+      | sebastianwild1988@gmail.com | Testing1 | Sebastian       | Kowalski               | Katarzyna        | Kowalska            | 1234567891234567 | 0223       | 123 | Sebastian Wild | Barcelona | Camp Nou | 12345   |
